@@ -52,9 +52,9 @@ if a == 'apt':
     os.system('systemctl reload nginx')
 if a == 'yum':
     os.system('yum install nginx')
-    os.system('apt install -y nginx')
-    os.system('apt install -y mysql')
-    os.system('apt install -y php-fpm php-mysql')
+    os.system('yum install -y nginx')
+    os.system('yum install -y mysql')
+    os.system('yum install -y php-fpm php-mysql')
     os.system('touch /etc/nginx/sites-available/' + domain + '.conf')
     os.system('cat test.txt > /etc/nginx/sites-available/' + domain + '.conf')
     os.system('mkdir /var/www/html/' + domain)
